@@ -1,0 +1,38 @@
+instalar laravel en windows con el xampp y el composer instalado: composer global require laravel/installer
+crear una aplicación en laravel: laravel new nombre_del_proyecto
+forma alterna: composer create-project --prefer-dist laravel/laravel nombre_del_proyecto
+forma alterna con una versión de laravel en específico: composer create-project --prefer-dist laravel/laravel nombre_del_proyecto 8.3.0
+correr el proyecto, ir a la carpeta del proyecto: php artisan serve
+correr la aplicación en un puerto distinto php artisan --port=PORT_NUMBER php artisan serve --port=3040
+
+en el archivo .env es donde se modifica la conección a la base de datos, por la linea 14 aproximadamente
+
+correr migraciones php artisan migrate
+crear el modelo control y recursos: php artisan make:model Empleado -mcr
+en la carpeta database migrations buscar el archivo de mi migración y ahí podre colocar los campos para crear tablas nuevas en la BD
+correr de nuevo el comando php artisan migrate para que se refleje en la BD
+
+crear en la carpeta view el archivo .blade.php y en las rutas para poder acceder a el colocar 
+Route::get('/empleado', function () {
+    return view('empleado.index');
+});
+
+otra forma de acceder a la vista es a travez de la clase
+
+acceder a la pagina en el navegador http://localhost/prueba1/public/empleado  ó  http://127.0.0.1:8000/empleado
+
+conocer rutas activas:php artisan route:list
+
+hacer link a la carpeta storage para poder mostrar las imagenes: php artisan storage:link
+
+para agregar bootstrap: composer require laravel/ui
+php artisan ui bootstrap --auth
+npm install  teniendo instalado node js
+npm run dev
+
+en layouts esta el app.blade donde viene el navbar que dice laravel
+
+para paginar en AppServiceProvider.php incluir use Illuminate\Pagination\Paginator;
+al final de la vista en la tabla, colocar {!! $empleados->links() !!}
+
+TOKEN GIT HUB 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
