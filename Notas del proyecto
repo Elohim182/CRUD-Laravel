@@ -32,6 +32,14 @@ npm run dev
 
 en layouts esta el app.blade donde viene el navbar que dice laravel
 
+para agregar que se vaya al index, colocar 
+<!-- Left Side Of Navbar -->
+         <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('empleado.index') }}">{{ __('Empleados') }}</a>
+            </li>
+        </ul>
+
 para paginar en AppServiceProvider.php incluir use Illuminate\Pagination\Paginator;
 al final de la vista en la tabla, colocar {!! $empleados->links() !!}
 
