@@ -8,7 +8,7 @@ correr la aplicación en un puerto distinto php artisan --port=PORT_NUMBER php a
 en el archivo .env es donde se modifica la conección a la base de datos, por la linea 14 aproximadamente
 
 correr migraciones php artisan migrate
-crear el modelo control y recursos: php artisan make:model Empleado -mcr
+crear el modelo control y migración: php artisan make:model Empleado -mcr
 en la carpeta database migrations buscar el archivo de mi migración y ahí podre colocar los campos para crear tablas nuevas en la BD
 correr de nuevo el comando php artisan migrate para que se refleje en la BD
 
